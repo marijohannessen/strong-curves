@@ -1,0 +1,158 @@
+.new-entry {
+  margin: 1rem 0;
+  background-color: $eggshell;
+  color: $navy-blue;
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  display: none;
+  z-index: -1;
+
+  &.active {
+    display: block;
+    z-index: auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 2px solid $navy-blue;
+    margin-bottom: 1.25rem;
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  &__heading {
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.workout-tracker {
+  list-style: none;
+
+  &__info {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  &__workout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 0 1rem;
+    border-top: 2px solid black;
+    margin: 1rem 0 0;
+  }
+
+  .sets-reps {
+    display: flex;
+    margin: .25rem 0 1rem;
+
+    p {
+      font-size: .875rem;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-right: 1rem;
+    }
+  }
+
+  &__submit {
+
+    button {
+      padding: 1rem;
+      border: 2px solid black;
+      font-family: inherit;
+      background-color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      width: 100%;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        background-color: $coral;
+      }
+    }
+  }
+}
+
+.workout {
+
+  &__name {
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.sets-tracker {
+  list-style: none;
+  width: 100%;
+
+  li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+
+    h2 {
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-top: 1.2rem;
+      font-weight: 400;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 70px;
+        width: 15px;
+        background-color: $coral;
+        top: 0px;
+        left: -20px;
+      }
+    }
+
+    .inputs {
+      display: flex;
+
+      &__weight,
+      &__reps,
+      &__seconds {
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          margin-bottom: .25rem;
+          font-size: 1rem;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+
+      input {
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-family: inherit;
+        width: 7rem;
+        text-align: center;
+      }
+    }
+  }
+}

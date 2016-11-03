@@ -1,0 +1,86 @@
+.prev-entries {
+  margin-top: 1rem;
+
+  & > h2 {
+    padding: 1rem 1rem .5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    border-bottom: 1px solid $coral;
+  }
+}
+
+.prev-entries-list {
+  list-style: none;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  &__item {
+    // margin-bottom: 1rem;
+
+    & > h1 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: .5px;
+      margin-bottom: 1rem;
+    }
+
+    &.empty {
+      display: none;
+    }
+
+    .day-entry {
+      margin-top: .5rem;
+
+      & > h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        border-bottom: 2px solid black;
+        padding-bottom: .5rem;
+      }
+
+      .prev-entries-workouts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: .5rem;
+
+        li {
+          margin: 0 1rem 1rem 0;
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            margin-left: 1.5rem;
+            display: flex;
+          }
+        }
+
+        h3 {
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: .5px;
+          margin-bottom: .25rem;
+          margin-right: 1rem;
+          flex: 1;
+        }
+
+        p {
+          font-size: 1rem;
+          letter-spacing: .5px;
+          margin-right: 1rem;
+        }
+      }
+
+      &.empty {
+        display: none;
+      }
+    }
+  }
+}

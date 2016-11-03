@@ -1,0 +1,39 @@
+.stats {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__list-item {
+    width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: $eggshell;
+    color: $coral;
+    border-right: 3px solid $navy-blue;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &__label {
+      font-size: .75rem;
+      margin-top: 0;
+    }
+
+    &__value {
+      font-size: 2rem;
+      color: $navy-blue;
+
+      &--unit {
+        font-size: .75rem;
+        text-transform: uppercase;
+        margin-left: .25rem;
+      }
+    }
+  }
+}
