@@ -6,6 +6,18 @@ class PreviousEntries extends React.Component {
     super(props);
   }
 
+  expandWeek = (evt) => {
+    const target = evt.currentTarget;
+    const week = target.parentElement.querySelector('.day-entry');
+    week.classList.toggle('visible');
+  }
+
+  expandDay = (evt) => {
+    const target = evt.currentTarget;
+    const day = target.parentElement.querySelector('.prev-entries-workouts');
+    day.classList.toggle('visible');
+  }
+
   renderEntries = (key, i) => {
     const weekNumber = i + 1;
     const weekStats = this.props.entries[key];
@@ -13,7 +25,7 @@ class PreviousEntries extends React.Component {
     const classNames = isEmpty ? "prev-entries-list__item empty" : "prev-entries-list__item";
     return (
       <li key={key} className={classNames}>
-        <h1>Week {weekNumber}</h1>
+        <h1 onClick={this.expandWeek} class="week-trigger">Week {weekNumber}</h1>
         {Object.keys(weekStats).map((k, a) => {
           const currentObj = weekStats[k];
           const isEmpty = (weekStats[k].workout1.length === 0);
@@ -21,7 +33,7 @@ class PreviousEntries extends React.Component {
           const amount = ['1', '2', '3', '4', '5', '6', '7', '8'];
           return (
             <div key={k} className={classNames}>
-              <h2>Day {a+1}</h2>
+              <h2 onClick={this.expandDay}>Day {a+1}</h2>
               <ul className="prev-entries-workouts">
                 {Object.keys(currentObj).map((b, d) => {
                   const statArray = currentObj[b];
@@ -59,7 +71,7 @@ class PreviousEntries extends React.Component {
             })}
           </ul>
         </div>
-      )  
+      )
     }
   }
 };

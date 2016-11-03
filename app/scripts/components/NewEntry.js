@@ -29,6 +29,7 @@ class NewEntry extends React.Component {
       });
       workoutObj[key] = setsArray;
     })
+    document.querySelector('.new-entry').classList.remove('active');
     this.props.saveWorkout(workoutObj);
   };
 

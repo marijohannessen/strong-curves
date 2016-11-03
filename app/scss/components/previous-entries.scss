@@ -19,14 +19,14 @@
   margin-top: 1rem;
 
   &__item {
-    // margin-bottom: 1rem;
 
     & > h1 {
       font-size: 1.4rem;
       text-transform: uppercase;
       font-weight: 400;
       letter-spacing: .5px;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
+      cursor: pointer;
     }
 
     &.empty {
@@ -34,14 +34,17 @@
     }
 
     .day-entry {
-      margin-top: .5rem;
+      margin-top: 1rem;
+      display: none;
+
+      &.visible {
+        display: block;
+      }
 
       & > h2 {
-        margin-bottom: 1.25rem;
         font-size: 1.25rem;
         text-transform: uppercase;
-        border-bottom: 2px solid black;
-        padding-bottom: .5rem;
+        cursor: pointer;
       }
 
       .prev-entries-workouts {
@@ -49,7 +52,14 @@
         flex-direction: column;
         justify-content: space-between;
         list-style: none;
-        margin-top: .5rem;
+        padding-top: 1rem;
+        border-top: 2px solid black;
+        margin-top: 1rem;
+        display: none;
+
+        &.visible {
+          display: flex;
+        }
 
         li {
           margin: 0 1rem 1rem 0;
