@@ -1,1 +1,1 @@
-# React Template
+# Workout app inspired by Strong Curves
